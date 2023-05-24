@@ -1,0 +1,348 @@
+/* Fonts */
+@font-face {
+  font-family: "HankenGrotesk-ExtraBold";
+  src: url("../fonts/HankenGrotesk-ExtraBold.eot");
+  src: url("../fonts/HankenGrotesk-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HankenGrotesk-ExtraBold.woff2") format("woff2"),
+    url("../fonts/HankenGrotesk-ExtraBold.woff") format("woff"),
+    url("../fonts/HankenGrotesk-ExtraBold.ttf") format("truetype"),
+    url("../fonts/HankenGrotesk-ExtraBold.svg#HankenGrotesk-ExtraBold")
+      format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HankenGrotesk-Bold";
+  src: url("../fonts/HankenGrotesk-Bold.eot");
+  src: url("../fonts/HankenGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/HankenGrotesk-Bold.woff2") format("woff2"),
+    url("../fonts/HankenGrotesk-Bold.woff") format("woff"),
+    url("../fonts/HankenGrotesk-Bold.ttf") format("truetype"),
+    url("../fonts/HankenGrotesk-Bold.svg#HankenGrotesk-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HankenGrotesk-Medium";
+  src: url("../fonts/HankenGrotesk-Medium.eot");
+  src: url("../fonts/HankenGrotesk-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HankenGrotesk-Medium.woff2") format("woff2"),
+    url("../fonts/HankenGrotesk-Medium.woff") format("woff"),
+    url("../fonts/HankenGrotesk-Medium.ttf") format("truetype"),
+    url("../fonts/HankenGrotesk-Medium.svg#HankenGrotesk-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*CSS Global*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  /* 10px */
+  font-size: 62.5%;
+}
+
+body {
+  /* 18px */
+  font-size: 1.8rem;
+}
+
+:root {
+  /* Primary */
+  --lightRed: hsl(0, 100%, 67%);
+  --orangeyYellow: hsl(39, 100%, 56%);
+  --greenTeal: hsl(166, 100%, 37%);
+  --cobaltBlue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --lightSlateBlueBackground: hsl(252, 100%, 67%);
+  --lightRoyalBlueBbackground: hsl(241, 81%, 54%);
+  --violetBlueCircle: hsla(256, 72%, 46%, 1);
+  --persianBlueCircle: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+
+  --colorGray: #92929a;
+  --btnBgColor: #303b5b;
+
+  /* Fonts */
+  --HankenGrotesk-Medium: "HankenGrotesk-Medium", sans-serif;
+  --HankenGrotesk-Bold: "HankenGrotesk-Bold", sans-serif;
+  --HankenGrotesk-ExtraBold: "HankenGrotesk-ExtraBold", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.title {
+  font-family: var(--HankenGrotesk-Bold);
+}
+
+.box-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    360deg,
+    var(--lightRoyalBlueBbackground) 0%,
+    var(--lightSlateBlueBackground) 100%
+  );
+  border-radius: 15px;
+  width: 300px;
+  height: 380px;
+  padding: 0px 30px;
+  gap: 1.5rem;
+}
+
+.title-result {
+  color: var(--lightLavender);
+}
+
+.box-counter {
+  background: linear-gradient(
+    0deg,
+    var(--persianBlueCircle) 0%,
+    var(--violetBlueCircle) 100%
+  );
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.result-counter {
+  font-family: var(--HankenGrotesk-ExtraBold);
+  font-size: 4.5rem;
+}
+
+.hundred-total {
+  font-family: var(--HankenGrotesk-Medium);
+  font-size: 1.3rem;
+  color: var(--lightLavender);
+}
+
+.note {
+  font-family: var(--HankenGrotesk-Bold);
+  color: var(--white);
+}
+
+.message {
+  font-family: var(--HankenGrotesk-Medium);
+  font-size: 1.3rem;
+  color: var(--lightLavender);
+  text-align: center;
+}
+
+.box-summary {
+  font-family: var(--HankenGrotesk-Medium);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 380px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  border-radius: 0px 15px 15px 0px;
+  padding: 0px 30px;
+  gap: 1.5rem;
+}
+
+.box-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.box-category.reaction {
+  background-color: hsla(0, 100%, 85%, 0.178);
+}
+
+.box-category.memory {
+  background-color: hsla(39, 100%, 56%, 0.11);
+}
+
+.box-category.verbal {
+  background-color: hsla(166, 100%, 37%, 0.116);
+}
+
+.box-category.visual {
+  background-color: hsla(234, 85%, 45%, 0.082);
+}
+
+.category {
+  display: flex;
+  align-items: center;
+}
+
+.text-category {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.text-reaction {
+  color: var(--lightRed);
+}
+
+.text-memory {
+  color: var(--orangeyYellow);
+}
+
+.text-verbal {
+  color: var(--greenTeal);
+}
+
+.text-visual {
+  color: var(--cobaltBlue);
+}
+
+.score-total {
+  font-family: var(--HankenGrotesk-Bold);
+}
+
+.hundred {
+  color: var(--colorGray);
+}
+
+.btn {
+  color: var(--white);
+  text-align: center;
+  display: block;
+  background-color: var(--btnBgColor);
+  padding: 10px 0px;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    360deg,
+    var(--lightRoyalBlueBbackground) 0%,
+    var(--lightSlateBlueBackground) 100%
+  );
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100vw;
+  }
+  .box-result {
+    border-radius: 0px 0px 25px 25px;
+    width: 100vw;
+  }
+  .message,
+  .hundred-total {
+    font-size: 1.5rem;
+  }
+  .box-summary {
+    width: 100vw;
+    box-shadow: none;
+  }
+}
